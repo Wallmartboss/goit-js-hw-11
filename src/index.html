@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 10</title>
+    <title>Homework 11</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="./1-timer.html">Timer</a></li>
-        <li><a href="./2-snackbar.html">Snackbar</a></li>
-      </ul>
-    </nav>
+    <form class="search-form" autocomplete="off">
+      <label>
+        <input type="text" name="search-field" placeholder="Search images..." autofocus />
+      </label>
+      <button type="submit">Search</button>
+    </form>
+    <ul class="gallery"></ul>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/pixabay-api.js"></script>
+    <script type="module" src="./js/render-functions.js"></script>
   </body>
 </html>
