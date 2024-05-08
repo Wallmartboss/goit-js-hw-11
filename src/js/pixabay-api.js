@@ -98,12 +98,8 @@ fetch("https://pixabay.com/api/?key=43769580-78f5aea5f54664bb89b2b40f7&q=sharks&
         pic.downloads = data.hits[i].downloads;
         images.push(pic);
       }
-      console.log(images);
-      // export images;
-          // const imageUrl = data.hits[0].webformatURL;
-      // console.log(imageUrl);
-      // Здесь вы можете использовать imageUrl, например, установить его как источник изображения для HTML элемента
-    } else {
+      // console.log(images);
+             } else {
             iziToast.error({
             title: 'Error',
             message: `Sorry, there are no images matching your search query. Please try again!`,

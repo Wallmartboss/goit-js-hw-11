@@ -5,7 +5,7 @@ let lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
 });
 import { images } from './pixabay-api.js';
-
+console.log(images);
 const gallery = document.querySelector('ul.gallery');
 
 const createElGallery = image => {
