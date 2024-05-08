@@ -22,7 +22,7 @@ function handleSubmit(event) {
     title: 'Caution',
     message: 'This field must be filled in',
     position: 'topLeft',
-})      } else {
+  }) } else {
     userData = textInput;
     form.reset();
     gallery.innerHTML = "";
@@ -60,21 +60,21 @@ function handleSubmit(event) {
               </a>
               <div class="item-info">
                 <div class="item-data">
-              <p class="item-param">Likes</p>
-              <p class="item-counter">${image.likes}</p>
-              </div>
-              <div class="item-data">
-              <p class="item-param">Views</p>
-              <p class="item-counter">${image.views}</p>
-              </div>
-              <div class="item-data">
-              <p class="item-param">Comments</p>
-              <p class="item-counter">${image.comments}</p>
-              </div>
-              <div class="item-data">
-              <p class="item-param">Downloads</p>
-              <p class="item-counter">${image.downloads}</p>
-              </div>
+                  <p class="item-param">Likes</p>
+                  <p class="item-counter">${image.likes}</p>
+                </div>
+                <div class="item-data">
+                  <p class="item-param">Views</p>
+                  <p class="item-counter">${image.views}</p>
+                </div>
+                <div class="item-data">
+                  <p class="item-param">Comments</p>
+                  <p class="item-counter">${image.comments}</p>
+                </div>
+                <div class="item-data">
+                  <p class="item-param">Downloads</p>
+                  <p class="item-counter">${image.downloads}</p>
+                </div>
               </div>
             </li>`;
           };
