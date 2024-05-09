@@ -9,12 +9,21 @@ import { markupGallery } from './js/render-functions';
 const form = document.querySelector('.search-form');
 const input = form.querySelector('input');
 let userData;
-// let images = [];
 const gallery = document.querySelector('ul.gallery');
+const loader = document.querySelector('.loader');
+
+function showLoader() {
+  loader.classList.remove('is-hidden');
+};
+
+function hideLoader() {
+  loader.classList.add('is-hidden');
+};
 
 function handleSubmit(event) {
-  event.preventDefault();
-  const textInput = input.value.trim();
+    event.preventDefault();
+
+     const textInput = input.value.trim();
 
   if (textInput === "") {
     iziToast.warning({
@@ -25,9 +34,10 @@ function handleSubmit(event) {
     userData = textInput;
     form.reset();
     gallery.innerHTML = "";
-    
+      showLoader();
     pixabayRequest(userData)
         .then(response => {
+            hideLoader();
             if (response.hits.length > 0) {
                   markupGallery(response, gallery);
               

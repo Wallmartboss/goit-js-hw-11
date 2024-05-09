@@ -9,6 +9,5 @@ export function pixabayRequest(userData) {
         throw new Error(response.status);
       }
       return response.json();
-      console.log(response.json());
-    });
+         });
 }
